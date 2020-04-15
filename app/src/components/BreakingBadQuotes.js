@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import Loader from "react-loader";
+import { fetchQuote } from "../store/actions/BreakingBadActions";
 
 const BreakingBadQuote = (props) => {
+  useEffect(() => {
+    props.fetchQuote();
+  }, []);
+
+  //   if (props.isFetching) {
+  //     return <Loader />;
+  //   }
+
   return (
     <div>
       <h1> Breaking Bad Quotes</h1>
+      {props.isFetching && (
+        <Loader type="Circles" color="darkGreen" height={100} width={50} />
+      )}
       {props.quote && <h3>"{props.quote}"</h3>}
     </div>
   );
@@ -20,4 +33,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, {})(BreakingBadQuote);
+export default connect(mapStateToProps, { fetchQuote })(BreakingBadQuote);
