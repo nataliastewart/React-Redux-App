@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import BreakingBadQuotes from "./components/BreakingBadQuotes";
 
 function App() {
   return (
@@ -11,8 +11,9 @@ function App() {
           className="App-logo"
           alt="logo"
         />
-        <p>Breaking Bad Quotes</p>
       </header>
+
+      <BreakingBadQuotes />
     </div>
   );
 }
