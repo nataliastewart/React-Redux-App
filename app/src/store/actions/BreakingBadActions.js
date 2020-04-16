@@ -12,7 +12,7 @@ export const fetchQuote = () => {
         console.log("RES", res);
         dispatch({
           type: "FETCH_QUOTE_SUCCESS",
-          payload: res.data[0].quote,
+          payload: res.data[0],
           // payload: res.data[0].author,
         });
 
@@ -28,6 +28,6 @@ export const fetchQuote = () => {
   };
 };
 
-export const updateTitle = (newTitle) => {
-  return {};
-};
+// export const updateTitle = (newTitle) => {
+//   return {};
+// };

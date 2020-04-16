@@ -20,7 +20,7 @@ const BreakingBadQuote = (props) => {
         <Loader type="Circles" color="darkGreen" height={100} width={50} />
       )}
       {props.quote && <h3>"{props.quote}"</h3>}
-      {/* {props.author && <h3>"{props.author}"</h3>} */}
+      {props.author && <h3>"{props.author}"</h3>}
       {props.error && <p className="error">{props.error}</p>}
       <button className="button" onClick={props.fetchQuote}>
         Fetch a new quote!
