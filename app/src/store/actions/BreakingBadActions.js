@@ -9,7 +9,14 @@ export const fetchQuote = () => {
     axios
       .get("https://breaking-bad-quotes.herokuapp.com/v1/quotes")
       .then((res) => {
-        //console.log("RES", res.data.quote)
+        console.log("RES", res);
+        dispatch({
+          type: "FETCH_QUOTE_SUCCESS",
+          payload: res.data[0].quote,
+          // payload: res.data[0].author,
+        });
+
+        // console.log("res.data.quote", res.data.quote);
       })
       .catch((err) => console.log(err.response));
   };

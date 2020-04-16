@@ -11,6 +11,7 @@ const BreakingBadQuote = (props) => {
   //   if (props.isFetching) {
   //     return <Loader />;
   //   }
+  console.log("PROPS", props);
 
   return (
     <div>
@@ -19,6 +20,7 @@ const BreakingBadQuote = (props) => {
         <Loader type="Circles" color="darkGreen" height={100} width={50} />
       )}
       {props.quote && <h3>"{props.quote}"</h3>}
+      {props.author && <h3>"{props.author}"</h3>}
     </div>
   );
 };

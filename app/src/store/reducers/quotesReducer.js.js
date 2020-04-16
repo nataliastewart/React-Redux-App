@@ -1,5 +1,5 @@
 const initialState = {
-  quote: "Everyone sounds like Meryl Streep with a gun to their head.",
+  quote: "",
   author: "",
   isFetching: false,
   error: "",
@@ -12,6 +12,14 @@ export const quotesReducer = (state = initialState, action) => {
       return {
         ...state,
         isFetching: true,
+      };
+    case "FETCH_QUOTE_SUCCESS":
+      return {
+        ...state,
+        isFetching: false,
+        quote: action.payload,
+        // author: action.payload.author,
+        error: "",
       };
 
       return state;
