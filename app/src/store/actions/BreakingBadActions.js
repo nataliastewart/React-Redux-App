@@ -18,7 +18,13 @@ export const fetchQuote = () => {
 
         // console.log("res.data.quote", res.data.quote);
       })
-      .catch((err) => console.log(err.response));
+      .catch((err) => {
+        dispatch({
+          type: "FETCH_QUOTE_FAILURE",
+          payload: `Error ${err.response.status}: ${err.response.data}`,
+        });
+      });
+    //  console.log("ERROR CATCH", err.response);
   };
 };
 

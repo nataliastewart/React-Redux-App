@@ -7,7 +7,6 @@ const initialState = {
 
 export const quotesReducer = (state = initialState, action) => {
   switch (action.type) {
-    default:
     case "FETCH_QUOTE_START":
       return {
         ...state,
@@ -21,7 +20,13 @@ export const quotesReducer = (state = initialState, action) => {
         // author: action.payload.author,
         error: "",
       };
-
+    case "FETCH_QUOTE_FAILURE":
+      return {
+        ...state,
+        isFetching: false,
+        error: action.payload,
+      };
+    default:
       return state;
   }
 };
