@@ -22,7 +22,9 @@ const BreakingBadQuote = (props) => {
       {props.quote && <h3>"{props.quote}"</h3>}
       {/* {props.author && <h3>"{props.author}"</h3>} */}
       {props.error && <p className="error">{props.error}</p>}
-      <button onClick={props.fetchQuote}>Fetch a new quote!</button>
+      <button className="button" onClick={props.fetchQuote}>
+        Fetch a new quote!
+      </button>
     </div>
   );
 };

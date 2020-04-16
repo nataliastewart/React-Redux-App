@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -13,15 +13,19 @@
   }
 }
 
+.App-logo02 {
+  height: 40vmin;
+}
+
 .App-header {
   background-color: white;
   min-height: 40vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
-  color: darkgreen;
+  background-color: #2eb82e;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +39,14 @@
 
 .error {
   color: red;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #cccc00;
+  font-family: "Special Elite", cursive;
+}
+
+.button:hover {
+  background-color: #3e8e41;
 }
